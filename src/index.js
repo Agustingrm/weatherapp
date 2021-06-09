@@ -1,8 +1,6 @@
 import mainFrame from './mainFrame';
-import { getWeather } from './getWeather';
+import search from './search';
 
-
-mainFrame();
-getWeather();
-
+mainFrame()
+search();
 
