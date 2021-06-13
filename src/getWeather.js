@@ -7,7 +7,7 @@ function getWeather() {
   async function weather() {
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=27a1120f4c8eeb5728e136f3eafe2d34`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=27a1120f4c8eeb5728e136f3eafe2d34`,
         { mode: "cors" }
       );
       const weatherData = await response.json();
@@ -15,7 +15,7 @@ function getWeather() {
         cityNotFound.style.display = 'block'
       } else {
         cityNotFound.style.display = 'none'
-        
+
         const city = document.getElementById("city");
         city.innerHTML = weatherData.name;
 

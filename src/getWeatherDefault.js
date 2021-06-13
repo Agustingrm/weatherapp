@@ -7,7 +7,7 @@ function getWeatherDefault() {
   async function weather() {
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=tucuman&appid=27a1120f4c8eeb5728e136f3eafe2d34`,
+        `https://api.openweathermap.org/data/2.5/weather?q=tucuman&appid=27a1120f4c8eeb5728e136f3eafe2d34`,
         { mode: "cors" }
       );
       const weatherData = await response.json();
