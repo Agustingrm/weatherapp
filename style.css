@@ -53,6 +53,11 @@ input {
   margin-left: 10px;
 }
 
+#celsiusOrFahrenheit:hover {
+    background-color: rgb(202, 2, 2);
+    cursor: pointer;
+}
+
 #searchButton:hover {
   background-color: orange;
   cursor: pointer;
