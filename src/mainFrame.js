@@ -26,6 +26,11 @@ const mainFrame = () => {
   celsiusOrFahrenheit.innerHTML = "°C";
   searchDiv.appendChild(celsiusOrFahrenheit);
 
+  const cityNotFound = document.createElement("p");
+  cityNotFound.setAttribute("id", "cityNotFound");
+  cityNotFound.innerHTML = "City not found, try again";
+  content.appendChild(cityNotFound);
+
   const card = document.createElement("div");
   card.setAttribute("id", "card");
   content.appendChild(card);
@@ -34,16 +39,45 @@ const mainFrame = () => {
   city.setAttribute("id", "city");
   card.appendChild(city);
 
+  const tempDiv = document.createElement("div");
+  tempDiv.setAttribute("id", "tempDiv");
+  card.appendChild(tempDiv);
+
+  const temperature = document.createElement("p");
+  temperature.setAttribute("id", "temperature");
+  temperature.innerHTML = '<strong>Temperature:&nbsp</strong>'
+  tempDiv.appendChild(temperature);
+
   const temp = document.createElement("p");
   temp.setAttribute("id", "temp");
-  card.appendChild(temp);
+  tempDiv.appendChild(temp);
+
+  const tempScale = document.createElement("p");
+  tempScale.setAttribute("id", "tempScale");
+  tempScale.innerHTML = '°C'
+  tempDiv.appendChild(tempScale);
   
+  const feelsLikeDiv = document.createElement("div");
+  feelsLikeDiv.setAttribute("id", "feelsLikeDiv");
+  card.appendChild(feelsLikeDiv);
+
+  const feelsLikeName = document.createElement("p");
+  feelsLikeName.setAttribute("id", "feelsLikeName");
+  feelsLikeName.innerHTML = '<strong>Feels Like:&nbsp</strong>'
+  feelsLikeDiv.appendChild(feelsLikeName);
+
   const feelsLike = document.createElement("p");
   feelsLike.setAttribute("id", "feelsLike");
-  card.appendChild(feelsLike);
+  feelsLikeDiv.appendChild(feelsLike);
+
+  const feelsLikeScale = document.createElement("p");
+  feelsLikeScale.setAttribute("id", "feelsLikeScale");
+  feelsLikeScale.innerHTML = '°C'
+  feelsLikeDiv.appendChild(feelsLikeScale);
 
   const climateCondition = document.createElement("p");
   climateCondition.setAttribute("id", "climateCondition");
+  climateCondition.innerHTML = "<strong>Climate Condition:</strong>"
   card.appendChild(climateCondition);
 
 };

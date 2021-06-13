@@ -1,80 +1,129 @@
 body {
-    margin: 0px;
-    background-color: rgb(82, 40, 199);
-    font-family: 'Quicksand', sans-serif;
+  margin: 0px;
+  background-color: rgb(219, 219, 219);
+  font-family: "Quicksand", sans-serif;
 }
 
 #headerDiv {
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    padding-top: 10px;
-    box-sizing: border-box;
-
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 
 header {
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: White;
-    font-size: 64px;
-    text-align: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: White;
+  font-size: 64px;
+  text-align: center;
 }
 
 input {
-    height: 30px;
-    width: 300px;
-    border: none;
-    margin-right: 10px;
-    border-radius: 5px;
-    padding-left: 10px;
-    font-size: large;
+  height: 30px;
+  width: 300px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: large;
 }
 
 #searchDiv {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 #searchButton {
-    background-color: rgb(255, 174, 23);
-    border: none;
-    border-radius: 4px;
-    width: 80px;
-    font-size: large;
+  background-color: rgb(255, 174, 23);
+  border: none;
+  border-radius: 4px;
+  width: 80px;
+  font-size: large;
 }
 
 #celsiusOrFahrenheit {
-    background-color: rgb(219, 2, 2);
-    color: white;
-    border: none;
-    width: 35px;
-    border-radius: 4px;
-    font-size: large;
-    margin-left: 10px;
+  background-color: rgb(219, 2, 2);
+  color: white;
+  border: none;
+  width: 35px;
+  border-radius: 4px;
+  font-size: large;
+  margin-left: 10px;
 }
 
 #searchButton:hover {
-    background-color: orange;
-    cursor:pointer;
+  background-color: orange;
+  cursor: pointer;
+}
+
+#cityNotFound {
+    font-size: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: 500;
+    color: red;
+    display: none;
 }
 
 #card {
-    width: 750px;
-    height: 250px;
-    background-color: rgb(250, 250, 250);
-    box-shadow: 10px 10px 15px rgb(31, 31, 31);
-    margin: 50px auto;
-    border-radius: 10px;
-    padding: 10px 20px;
-    box-sizing: border-box;
+  width: 750px;
+  height: 250px;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 10px 10px 15px rgb(31, 31, 31);
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 
 #city {
-    font-size: 40px;
-    margin: 10px 0;
+  font-size: 40px;
+  margin: 10px 0;
 }
 
-#temp, #feelsLike, #climateCondition {
-    font-size: 20px;
+#tempDiv,
+#feelsLikeDiv {
+  display: flex;
 }
+
+#temperature,
+#temp,
+#tempScale,
+#feelsLikeName,
+#feelsLike,
+#feelsLikeScale,
+#climateCondition {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+@media all and (max-width: 800px){
+    #card{
+        width: 500px;
+    }
+}
+
+@media all and (max-width: 500px){
+    #headerDiv {
+        padding-top: 22.5px;
+    }
+    
+    header {
+        font-size: 45px;
+    }
+
+    #searchBar {
+        width: 200px;
+    }
+
+    #card{
+        width: 100%;
+        border-radius: 0px
+    }
+    #city {
+        font-size: 30px;
+    }
+}
+

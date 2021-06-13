@@ -4,7 +4,7 @@ import mainFrame from './mainFrame';
 import search from './search';
 
 mainFrame();
-degrees();
 search();
+degrees()
 getWeatherDefault();
 

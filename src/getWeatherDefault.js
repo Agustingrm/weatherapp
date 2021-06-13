@@ -1,9 +1,8 @@
 let weatherData = "";
 
 function getWeatherDefault() {
-
   const defaultCity = document.getElementById("city");
-  defaultCity.innerHTML = 'Loading...';
+  defaultCity.innerHTML = "Loading...";
 
   async function weather() {
     try {
@@ -18,15 +17,11 @@ function getWeatherDefault() {
 
       const defaultTemp = document.getElementById("temp");
       defaultTemp.innerHTML =
-        "<strong>Temperature:</strong> " +
-        Math.round((weatherData.main.temp - 273.15) * 100) / 100 +
-        "°C";
+        Math.round((weatherData.main.temp - 273.15) * 100) / 100;
 
       const defaultFeelsLike = document.getElementById("feelsLike");
       defaultFeelsLike.innerHTML =
-        "<strong>Feels Like:</strong> " +
-        Math.round((weatherData.main.feels_like - 273.15) * 100) / 100 +
-        "°C";
+        Math.round((weatherData.main.temp - 273.15) * 100) / 100;
 
       const DefaultClimateCondition =
         document.getElementById("climateCondition");
